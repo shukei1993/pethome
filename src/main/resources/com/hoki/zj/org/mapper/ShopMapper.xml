@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.org.mapper.ShopMapper">
+    <!-- 1.添加 save -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_shop (name, tel, registerTime, state, address, logo, admin_id)
+        VALUES (
+            #{name},
+            #{tel},
+            #{registerTime},
+            #{state},
+            #{address},
+            #{logo},
+            #{admin_id}
+        )
+    </insert>
+
+    <!-- 2.修改update -->
+    <update id="update">
+        UPDATE t_shop SET
+            name=#{t_shop},
+            tel=#{t_shop},
+            state=#{t_shop},
+            address=#{t_shop},
+            logo=#{t_shop},
+            admin_id=#{t_shop}
+        WHERE id=#{id}
+    </update>
+
+    <!-- 3.删除单条delete -->
+    <delete id="delete">
+        DELETE FROM t_shop WHERE id=#{id}
+    </delete>
+
+    <!--4.查询单个findOne,Shop -->
+    <select id="findOne" resultType="Shop">
+        SELECT * FROM t_shop WHERE id=#{id}
+    </select>
+
+    <!-- 5.查询全部findAll Shop -->
+    <select id="findAll" resultType="Shop">
+        SELECT * FROM t_shop
+    </select>
+
+    <!--
+        6.分页高级查询
+        查询满足条件的数据总数 findCount long
+        查询所有满足条件的数据queryPage  Shop
+     -->
+    <select id="findCount" resultType="long">
+        SELECT COUNT(*) FROM t_shop
+        <include refid="shopSql"></include>
+    </select>
+    <select id="queryPage" resultType="Shop">
+        SELECT * FROM t_shop
+        <include refid="shopSql"></include>
+        LIMIT #{start}, #{pageSize}
+    </select>
+
+    <sql id="shopSql">
+        <where>
+            <if test="keywords != null and keywords != ''">
+                AND name LIKE CONCAT('%', #{keywords}, '%')
+            </if>
+        </where>
+    </sql>
+</mapper>
