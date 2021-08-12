@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.org.mapper.DepartmentMapper">
+    <!--void save(Department department); 因为传过来的是对象,manager_id, parent_id字段,取值是manager.id, parent.id -->
+    <insert id="save">
+        INSERT INTO t_department (sn, name, state, manager_id, parent_id)
+        VALUES
+        (
+          #{sn},
+          #{name},
+          #{state},
+          #{manager.id},
+          #{parent.id}
+        )
+    </insert>
+
+    <!--void update(Department department); 因为传过来的是对象,manager_id, parent_id字段,取值是manager.id, parent.id -->
+    <update id="update">
+        UPDATE t_department SET
+        sn=#{sn},
+        name=#{name},
+        state=#{state},
+        manager_id=#{manager.id},
+        parent_id=#{parent.id}
+        WHERE id=#{id}
+    </update>
+
+    <!--void delete(Long id);-->
+    <delete id="delete">
+        DELETE FROM t_department WHERE id=#{id}
+    </delete>
+
+    <!--Department findOne(Long id);-->
+    <select id="findOne" resultType="Department">
+        SELECT * FROM t_department WHERE id=#{id}
+    </select>
+
+    <!--List<Department> findAll();-->
+    <select id="findAll" resultType="Department">
+        SELECT * FROM t_department
+    </select>
+
+    <!--
+         Long findCount(DepartmentQuery departmentQuery);
+         List<Department> queryPage(DepartmentQuery departmentQuery);
+    -->
+    <select id="findCount" resultType="long">
+        SELECT count(*)
+            FROM t_department son
+            LEFT JOIN t_employee te ON  son.manager_id = te.id
+            LEFT JOIN t_department p ON son.parent_id = p.id
+        <include refid="whereSql"></include>
+    </select>
+
+    <select id="queryPage" resultMap="DepartmentMap">
+        SELECT son.*, te.id teid, te.username, p.id pid, p.name pname
+            FROM t_department son
+            LEFT JOIN t_employee te ON  son.manager_id = te.id
+            LEFT JOIN t_department p ON son.parent_id = p.id
+        <include refid="whereSql"></include>
+        LIMIT #{start}, #{pageSize}
+    </select>
+
+    <resultMap id="DepartmentMap" type="Department">
+        <id column="id" property="id"></id>
+        <result column="sn" property="sn"></result>
+        <result column="name" property="name"></result>
+        <result column="state" property="state"></result>
+        <!-- manager -->
+        <association property="manager" javaType="Employee">
+            <id column="teid" property="id"></id>
+            <result column="username" property="username"></result>
+        </association>
+        <!-- parent -->
+        <association property="parent" javaType="Department">
+            <id column="pid" property="id"></id>
+            <result column="pname" property="name"></result>
+        </association>
+    </resultMap>
+
+    <sql id="whereSql">
+        <where>
+            <if test="keywords != null and keywords != ''">
+                AND son.name LIKE CONCAT("%", #{keywords}, "%")
+            </if>
+        </where>
+    </sql>
+
+
+    <!-- 批量删除功能void batchRemove(Long... ids); -->
+    <delete id="batchRemove">
+        DELETE FROM t_department WHERE id IN
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

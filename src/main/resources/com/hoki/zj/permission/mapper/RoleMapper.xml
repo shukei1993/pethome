@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.permission.mapper.RoleMapper">
+    <!-- 1.添加void save(Role role); -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_role (name, sn) VALUES
+            (
+                #{name},
+                #{sn}
+            )
+    </insert>
+
+    <!-- 2.void update(Role role); -->
+    <update id="update">
+        UPDATE t_role
+        SET
+            name = #{name},
+            sn   = #{sn}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 3.删除,void delete(Long id); -->
+    <delete id="delete">
+        DELETE FROM t_role
+        WHERE id = #{id}
+    </delete>
+    <!-- 删除t_employee_role的关联数据void deleteEmployeeRoleByRoleId(Long id); -->
+    <delete id="deleteEmployeeRoleByRoleId">
+        DELETE FROM t_employee_role
+        WHERE role_id = #{id}
+    </delete>
+    <!-- 删除t_role_permission的关联数据 void deleteRolePermissionByRoleId(Long id); -->
+    <delete id="deleteRolePermissionByRoleId">
+        DELETE FROM t_role_permission
+        WHERE role_id = #{id}
+    </delete>
+
+
+    <!-- 4.查询单个角色Role findOne(Long id); -->
+    <select id="findOne" resultType="Role">
+        SELECT *
+        FROM t_role
+        WHERE id = #{id}
+    </select>
+
+    <!-- 5.查询全部角色List<Role> findAll(); -->
+    <select id="findAll" resultType="Role">
+        SELECT * FROM t_role
+    </select>
+
+    <!--
+        6.分页/高级查询
+        Long findCount(RoleQuery roleQuery);
+        List<Role> queryPage(RoleQuery roleQuery);
+    -->
+    <select id="findCount" resultType="long">
+        SELECT COUNT(*) FROM t_role
+        <include refid="roleSql"></include>
+    </select>
+
+    <select id="queryPage" resultType="Role">
+        SELECT * FROM t_role
+            <include refid="roleSql"></include>
+        LIMIT #{start}, #{pageSize}
+    </select>
+
+    <sql id="roleSql">
+        <where>
+            <if test="keywords != null and keywords != ''">
+                AND name LIKE CONCAT('%', #{keywords}, '%')
+                OR sn LIKE CONCAT('%', #{keywords}, '%')
+            </if>
+        </where>
+    </sql>
+</mapper>

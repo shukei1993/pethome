@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.org.mapper.EmployeeMapper">
+    <!-- 1.添加 void save(Employee employee); -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_employee (username, email, phone, password, age, state)
+        VALUES (
+            #{username},
+            #{email},
+            #{phone},
+            #{password},
+            #{age},
+            #{state}
+        )
+    </insert>
+
+    <!-- 2.修改 void  update(Employee employee); -->
+    <update id="update">
+        UPDATE t_employee
+        SET username=#{username},
+            email=#{email},
+            phone=#{phone},
+            password=#{password},
+            age=#{age},
+            state=#{state}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 3.删除单条,void  delete(Long id); -->
+    <delete id="delete">
+        DELETE FROM t_employee WHERE id = #{id}
+    </delete>
+
+    <!-- 4.查询单个 Employee findOne(Long id); -->
+    <select id="findOne" resultType="Employee">
+        SELECT * FROM t_employee WHERE id=#{id}
+    </select>
+
+    <!-- 5.查询全部 List<Employee> findAll(); -->
+    <select id="findAll" resultType="Employee">
+        SELECT * FROM t_employee
+    </select>
+
+    <!--
+        6.分页高级查询
+       查询员工总数  Long findCount(EmployeeQuery employeeQuery);
+
+       查询符合条件的具体数据 List<Employee> queryPage(EmployeeQuery employeeQuery);
+    -->
+
+    <select id="findCount" resultType="long">
+        SELECT count(*) FROM t_employee
+        <include refid="empSql"></include>
+    </select>
+
+    <select id="queryPage" resultType="Employee">
+        SELECT * FROM t_employee
+        <include refid="empSql"></include>
+        LIMIT #{start}, #{pageSize}
+    </select>
+    <sql id="empSql">
+        <where>
+            <if test="username != null and username != ''">
+                AND username LIKE CONCAT('%', #{username}, '%')
+            </if>
+            <if test="phone !=null and phone !=''">
+                AND phone LIKE CONCAT('%', #{phone}, '%')
+            </if>
+            <if test="state != null">
+                AND state=#{state}
+            </if>
+        </where>
+    </sql>
+
+    <!--7.批量删除 void batchRemove(Long[] ids); -->
+    <delete id="batchRemove">
+        DELETE FROM t_employee WHERE id IN
+            <foreach collection="array" item="id" separator="," open="(" close=")">
+                #{id}
+            </foreach>
+    </delete>
+</mapper>
