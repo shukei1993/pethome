@@ -5,6 +5,7 @@ import com.hoki.zj.org.query.ShopQuery;
 import com.hoki.zj.org.service.IShopService;
 import com.hoki.zj.utils.AjaxResult;
 import com.hoki.zj.utils.QueryResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
 public class ShopController {
 
     /** 注解注入创建IShopService对象 */
+    @Autowired
     private IShopService shopService;
 
     /**

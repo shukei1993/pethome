@@ -18,12 +18,12 @@
     <!-- 2.修改update -->
     <update id="update">
         UPDATE t_shop SET
-            name=#{t_shop},
-            tel=#{t_shop},
-            state=#{t_shop},
-            address=#{t_shop},
-            logo=#{t_shop},
-            admin_id=#{t_shop}
+            name=#{name},
+            tel=#{tel},
+            state=#{state},
+            address=#{address},
+            logo=#{logo},
+            admin_id=#{admin_id}
         WHERE id=#{id}
     </update>
 
