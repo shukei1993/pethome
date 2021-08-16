@@ -9,8 +9,8 @@ spring:
     password: sakura1993
     url: jdbc:mysql://localhost:3306/pethome?useUnicode=true&characterEncoding=utf8
 mybatis:
-  type-aliases-package: com.hoki.zj.org.domain,com.hoki.zj.permission.domain #配置别名
-  mapper-locations: classpath:com/hoki/zj/org/mapper/*Mapper.xml, classpath:com/hoki/zj/permission/mapper/*Mapper.xml #扫描mapper映射文件,根据规范来写,可以省略不写
+  type-aliases-package: com.hoki.zj.org.domain,com.hoki.zj.permission.domain, com.hoki.zj.system.domain #配置别名
+  mapper-locations: classpath:com/hoki/zj/org/mapper/*Mapper.xml, classpath:com/hoki/zj/permission/mapper/*Mapper.xml, classpath:com/hoki/zj/system/mapper/*Mapper.xml #扫描mapper映射文件,根据规范来写,可以省略不写
 logging:
   level:
     com:

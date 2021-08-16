@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan({"com.hoki.zj.org.mapper", "com.hoki.zj.permission.mapper"})
+@MapperScan({"com.hoki.zj.org.mapper", "com.hoki.zj.permission.mapper", "com.hoki.zj.system.mapper"})
 public class App {
 
     public static void main(String[] args) {

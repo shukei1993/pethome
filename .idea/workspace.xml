@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97392ce8-2b32-451a-ad50-1fda6e6a82d0" name="Default" comment="">
+    <list default="true" id="97392ce8-2b32-451a-ad50-1fda6e6a82d0" name="Default" comment="后端开发第三次上传(system/directory)">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryDetController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryTypeController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryDetail.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryType.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryDetailMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryTypeMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryDetailQuery.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryTypeQuery.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryDetailService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryTypeService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryTypeServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryDetailMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryTypeMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,6 +55,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pethome@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="pethome: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="t_employee: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -48,38 +70,19 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java">
+      <file leaf-file-name="DictionaryDetailServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="312">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-              <folding>
-                <marker date="1628785185474" expanded="true" signature="297:561" ph="INSERT INTO t_shop... " />
-                <marker date="1628785185474" expanded="true" signature="634:843" ph="UPDATE t_shop... " />
-                <marker date="1628785185474" expanded="true" signature="918:951" ph="DELETE FROM t_shop... " />
-                <marker date="1628785185474" expanded="true" signature="1050:1085" ph="SELECT * FRO... t_shop" />
-                <marker date="1628785185474" expanded="true" signature="1185:1205" ph="SELECT * FRO... t_shop" />
-                <marker date="1628785185474" expanded="true" signature="1380:1407" ph="SELECT COUNT... t_shop" />
-                <marker date="1628785185474" expanded="true" signature="1520:1540" ph="SELECT * FRO... t_shop" />
-                <marker date="1628785185474" expanded="true" signature="1520:1620" ph="SELECT * FRO... t_shop" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -100,9 +103,11 @@
       <find>department</find>
       <find>departmentMapper</find>
       <find>T</find>
+      <find>DictionaryType</find>
     </findStrings>
     <replaceStrings>
       <replace>t</replace>
+      <replace>DictionaryDetail</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -116,30 +121,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/EmployeeServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/DepartmentServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/permission/service/impl/RoleServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryTypeServiceImpl.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/AjaxResult.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/DepartmentTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/GlobalCorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/QueryResult.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_1.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/EmployeeController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IRoleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/permission/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/domain/BaseDomain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/Employee.java" />
@@ -172,6 +161,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/query/ShopQuery.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/DictionaryType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryTypeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryTypeQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryTypeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryTypeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryDetailMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryDetailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryDetController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryDetailQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryDetail.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryDetailMapper.xml" />
       </list>
     </option>
   </component>
@@ -188,11 +195,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="102" />
-    <option name="y" value="16" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="37" />
+    <option name="y" value="21" />
     <option name="width" value="1739" />
-    <option name="height" value="1033" />
+    <option name="height" value="1029" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -237,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,49 +252,13 @@
               <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
               <item name="pethome" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pethome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pethome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pethome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pethome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zj" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pethome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zj" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,23 +270,25 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pethome-web-parent/pethome-admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pethome-web-parent" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.hoki.zj.org.service.impl" />
-      <recent name="com.hoki.zj.basic.service.impl" />
-      <recent name="com.hoki.zj.system.service.impl" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\resources\com\hoki\zj\system\mapper" />
+      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\java\com\hoki\zj\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hoki.zj.system.controller" />
+      <recent name="com.hoki.zj.system.query" />
+      <recent name="com.hoki.zj.system.mapper" />
       <recent name="com.hoki.zj.org.query" />
       <recent name="com.hoki.zj.org.controller" />
-      <recent name="com.hoki.zj.org.service" />
-      <recent name="com.hoki.zj.org.mapper" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\java\com\hoki\zj\config" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hoki.zj.system.service.impl" />
+      <recent name="com.hoki.zj.org.service.impl" />
+      <recent name="com.hoki.zj.basic.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -494,7 +468,12 @@
       <workItem from="1628732630023" duration="7506000" />
       <workItem from="1628764634053" duration="120000" />
       <workItem from="1628765362483" duration="3990000" />
-      <workItem from="1628781850191" duration="3137000" />
+      <workItem from="1628781850191" duration="3546000" />
+      <workItem from="1628814021384" duration="661000" />
+      <workItem from="1628842771613" duration="55000" />
+      <workItem from="1628854603816" duration="1193000" />
+      <workItem from="1628899549694" duration="22603000" />
+      <workItem from="1629074333564" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="后端开发(shop模块)第一次上传">
       <created>1628769343338</created>
@@ -503,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628769343338</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="后端开发(shop模块)第二次上传">
+      <created>1628785311229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628785311229</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -518,19 +504,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78672000" />
+    <option name="totallyTimeSpent" value="103920000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="16" width="1739" height="1033" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.50215983" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29522082" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22300217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -539,11 +525,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7297619" sideWeight="0.49784017" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7292818" sideWeight="0.49784017" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23351482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15226781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970357" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -553,8 +539,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6868798" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.323043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5922652" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32265192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -566,9 +552,9 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29522082" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22300217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -578,16 +564,16 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7297619" sideWeight="0.49784017" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7292818" sideWeight="0.49784017" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6868798" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23351482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5922652" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15226781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970357" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.323043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32265192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -599,193 +585,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="后端开发(shop模块)第一次上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="后端开发(shop模块)第一次上传" />
+    <MESSAGE value="后端开发(shop模块)第二次上传" />
+    <MESSAGE value="后端开发第三次上传(system/directory)" />
+    <option name="LAST_COMMIT_MESSAGE" value="后端开发第三次上传(system/directory)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/AjaxResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_employee">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_permission">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="117" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar!/lombok/Data.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar!/lombok/NoArgsConstructor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="87" column="41" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="101" column="39" lean-forward="false" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/EmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/EmployeeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/QueryResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IEmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="63" lean-forward="false" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IDepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="69" lean-forward="false" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/permission/domain/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/permission/query/RoleQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_role_permission">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_employee_role">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -835,91 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/f00e5a92-b1b0-432e-815b-865e53f59958.SCHEMA:pethome">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>f00e5a92-b1b0-432e-815b-865e53f59958.SCHEMA:pethome</OriginalElement>
-          <nodes>
-            <node x="1271.874819664854" y="855.9865719675954">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_pet_acquisition</node>
-            <node x="3.5" y="331.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_permission</node>
-            <node x="1159.5" y="0.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_bill</node>
-            <node x="389.875" y="662.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee_role</node>
-            <node x="1901.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pet_type</node>
-            <node x="1571.0" y="825.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_product</node>
-            <node x="892.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_alipay_info</node>
-            <node x="614.0" y="825.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_goods</node>
-            <node x="1809.5" y="0.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_user_address</node>
-            <node x="0.0" y="0.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_menu</node>
-            <node x="0.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_goods_detail</node>
-            <node x="0.0" y="825.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_search_master_message</node>
-            <node x="76.37499999999997" y="662.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role_permission</node>
-            <node x="949.0" y="825.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_adopt</node>
-            <node x="945.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_recharge</node>
-            <node x="494.49999999999994" y="313.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee</node>
-            <node x="798.5" y="0.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_account_flow</node>
-            <node x="308.0" y="825.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pet</node>
-            <node x="251.5" y="385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role</node>
-            <node x="1280.0" y="1590.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_systemdictionarydetail</node>
-            <node x="1890.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_account</node>
-            <node x="1906.0" y="825.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_product_detail</node>
-            <node x="335.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_product</node>
-            <node x="1285.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_systemdictionarytype</node>
-            <node x="641.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_user</node>
-            <node x="1610.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_product_detail</node>
-            <node x="1310.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_department</node>
-            <node x="0.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_product_comment</node>
-            <node x="303.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_shop</node>
-            <node x="588.0" y="1837.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_logininfo</node>
-            <node x="0.0" y="2217.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pet_detail</node>
-            <node x="1572.0" y="1385.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_wxuser</node>
-            <node x="1493.5" y="0.0">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_address</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role_permission" target="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_permission">
-              <point x="-68.0" y="-59.0" />
-              <point x="144.37499999999997" y="637.0" />
-              <point x="117.5" y="637.0" />
-              <point x="0.0" y="131.5" />
-            </edge>
-            <edge source="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_systemdictionarydetail" target="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_systemdictionarytype">
-              <point x="0.0" y="-77.5" />
-              <point x="0.0" y="77.5" />
-            </edge>
-            <edge source="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_permission" target="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_menu">
-              <point x="0.0" y="-131.5" />
-              <point x="0.0" y="131.5" />
-            </edge>
-            <edge source="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee_role" target="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee">
-              <point x="65.75" y="-59.0" />
-              <point x="587.125" y="637.0" />
-              <point x="624.0" y="637.0" />
-              <point x="0.0" y="149.5" />
-            </edge>
-            <edge source="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role_permission" target="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role">
-              <point x="68.0" y="-59.0" />
-              <point x="280.375" y="637.0" />
-              <point x="307.25" y="637.0" />
-              <point x="-55.75" y="77.5" />
-            </edge>
-            <edge source="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee_role" target="f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role">
-              <point x="-65.75" y="-59.0" />
-              <point x="455.625" y="637.0" />
-              <point x="418.75" y="637.0" />
-              <point x="55.75" y="77.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7422570016474463" x="31.0" y="-112.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/DepartmentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -945,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,29 +698,289 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/domain/BaseDomain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/query/BaseQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/query/ShopQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/ShopMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/f00e5a92-b1b0-432e-815b-865e53f59958.SCHEMA:pethome">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>f00e5a92-b1b0-432e-815b-865e53f59958.SCHEMA:pethome</OriginalElement>
+          <nodes>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_pet_acquisition</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_permission</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_bill</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pet_type</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_product_comment</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee_role</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_product</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_alipay_info</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_goods</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_user_address</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_menu</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_goods_detail</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_search_master_message</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_role_permission</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_adopt</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_recharge</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_employee</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_account_flow</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pet</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_systemdictionarydetail</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pay_account</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_product_detail</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_product</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_systemdictionarytype</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_user</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_product_detail</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_department</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_pet_detail</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_shop</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_logininfo</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_wxuser</node>
+            <node x="" y="">f00e5a92-b1b0-432e-815b-865e53f59958.TABLE:pethome.t_order_address</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7422570016474463" x="1357.0" y="1640.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/DepartmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="87" column="41" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/Shop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/DictionaryTypeMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/QueryResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryTypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <element signature="e#907#908#0" expanded="false" />
+            <element signature="e#964#965#0" expanded="false" />
+            <element signature="e#1054#1055#0" expanded="false" />
+            <element signature="e#1113#1114#0" expanded="false" />
+            <element signature="e#1181#1182#0" expanded="false" />
+            <element signature="e#1228#1229#0" expanded="false" />
+            <element signature="e#1288#1289#0" expanded="false" />
+            <element signature="e#1343#1344#0" expanded="false" />
+            <element signature="e#1402#1403#0" expanded="false" />
+            <element signature="e#1455#1456#0" expanded="false" />
+            <element signature="e#1578#1579#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="96" lean-forward="false" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="98" column="80" lean-forward="false" selection-start-line="98" selection-start-column="80" selection-end-line="98" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1815#1816#0" expanded="false" />
+            <element signature="e#1871#1872#0" expanded="false" />
+            <element signature="e#1977#1978#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/BaseServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryTypeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="20" />
+        <state relative-caret-position="120">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryTypeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="633">
+          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryTypeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <marker date="1628908990147" expanded="true" signature="361:442" ph="INSERT INTO t_systemdictionarytype... " />
+            <marker date="1628908990147" expanded="true" signature="560:651" ph="UPDATE t_systemdictionarytype... " />
+            <marker date="1628908990147" expanded="true" signature="749:798" ph="DELETE FROM t_systemdictionarytype... " />
+            <marker date="1628908990147" expanded="true" signature="936:987" ph="SELECT * FRO... t_systemdictionarytype" />
+            <marker date="1628908990147" expanded="true" signature="1124:1160" ph="SELECT * FRO... t_systemdictionarytype" />
+            <marker date="1628908990147" expanded="true" signature="1272:1318" ph="DELETE FROM t_systemdictionarytype... " />
+            <marker date="1628908990147" expanded="true" signature="1657:1700" ph="SELECT COUNT... t_systemdictionarytype" />
+            <marker date="1628908990147" expanded="true" signature="1822:1937" ph="SELECT * FRO... t_systemdictionarytype" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_systemdictionarydetail">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryDetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_systemdictionarytype">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1005,68 +991,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/ShopMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryTypeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="51" />
+        <state relative-caret-position="330">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="11" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/domain/BaseDomain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryDetailQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="480">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/query/BaseQuery.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryDetailMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/query/ShopQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/Shop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        <state relative-caret-position="416">
+          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="57" selection-end-column="13" />
           <folding>
-            <marker date="1628785185474" expanded="true" signature="297:561" ph="INSERT INTO t_shop... " />
-            <marker date="1628785185474" expanded="true" signature="634:843" ph="UPDATE t_shop... " />
-            <marker date="1628785185474" expanded="true" signature="918:951" ph="DELETE FROM t_shop... " />
-            <marker date="1628785185474" expanded="true" signature="1050:1085" ph="SELECT * FRO... t_shop" />
-            <marker date="1628785185474" expanded="true" signature="1185:1205" ph="SELECT * FRO... t_shop" />
-            <marker date="1628785185474" expanded="true" signature="1380:1407" ph="SELECT COUNT... t_shop" />
-            <marker date="1628785185474" expanded="true" signature="1520:1540" ph="SELECT * FRO... t_shop" />
-            <marker date="1628785185474" expanded="true" signature="1520:1620" ph="SELECT * FRO... t_shop" />
+            <marker date="1629074412793" expanded="true" signature="309:392" ph="insert into t_systemdictionarydetail... " />
+            <marker date="1629074412793" expanded="true" signature="505:568" ph="update t_systemdictionarydetail... " />
+            <marker date="1629074412793" expanded="true" signature="655:706" ph="DELETE FROM t_systemdictionarydetail... " />
+            <marker date="1629074412793" expanded="true" signature="837:890" ph="select * fro... t_systemdictionarydetail" />
+            <marker date="1629074412793" expanded="true" signature="1020:1058" ph="select * fro... t_systemdictionarydetail" />
+            <marker date="1629074412793" expanded="true" signature="1158:1206" ph="DELETE FROM t_systemdictionarydetail... " />
+            <marker date="1629074412793" expanded="true" signature="1564:1609" ph="SELECT count... t_systemdictionarytype" />
+            <marker date="1629074412793" expanded="true" signature="1564:1640" ph="SELECT count... t_systemdictionarydetail" />
+            <marker date="1629074412793" expanded="true" signature="1721:1826" ph="SELECT * FRO... t_systemdictionarytype" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

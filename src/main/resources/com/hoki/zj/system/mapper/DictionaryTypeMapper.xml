@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.system.mapper.DictionaryTypeMapper">
+    <!--/** 添加 */-->
+    <!--void save(DictionaryType dictionaryType);-->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_systemdictionarytype (sn, name) VALUES
+            (#{sn}, #{name})
+    </insert>
+
+    <!--/** 修改 */
+    void update(DictionaryType dictionaryType);-->
+    <update id="update">
+        UPDATE t_systemdictionarytype
+        SET sn = #{sn}, name = #{name}
+        WHERE id=#{id}
+    </update>
+
+    <!--/** 删除一条 */
+    void delete(Long id);-->
+    <delete id="delete">
+        DELETE FROM t_systemdictionarytype WHERE id=#{id}
+    </delete>
+
+    <!--/** 查询一条 */
+    DictionaryType findOne(Long id);-->
+    <select id="findOne" resultType="DictionaryType">
+        SELECT * FROM t_systemdictionarytype WHERE id=#{id}
+    </select>
+
+    <!--/** 查询全部 */
+    List<DictionaryType> findAll();-->
+    <select id="findAll" resultType="DictionaryType">
+        SELECT * FROM t_systemdictionarytype
+    </select>
+
+    <!--/** 批量删除 */
+    void batchRemove(Long... ids);-->
+    <delete id="batchRemove">
+        DELETE FROM t_systemdictionarytype WHERE id IN
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--
+        分页/高级查询
+        Long findCount(DictionaryTypeQuery query);
+        List<DictionaryType> queryPage(DictionaryTypeQuery query);
+     -->
+    <select id="findCount" resultType="long">
+        SELECT COUNT(*) FROM t_systemdictionarytype
+        <include refid="dicSql"></include>
+    </select>
+    <select id="queryPage" resultType="DictionaryType">
+        SELECT * FROM t_systemdictionarytype
+        <include refid="dicSql"></include>
+        LIMIT #{start}, #{pageSize}
+    </select>
+
+    <sql id="dicSql">
+        <where>
+            <if test="keywords != null and keywords != ''">
+                AND name Like CONCAT('%', #{keywords}, '%')
+                OR sn Like CONCAT('%', #{keywords}, '%')
+            </if>
+        </where>
+    </sql>
+</mapper>

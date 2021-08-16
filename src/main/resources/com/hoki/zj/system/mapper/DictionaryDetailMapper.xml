@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.system.mapper.DictionaryDetailMapper">
+    <!-- 1.void save(DictionaryDetail dictionaryDetail); -->
+    <insert id="save">
+        insert into t_systemdictionarydetail (name, types_id) values (#{name}, #{types_id});
+    </insert>
+
+    <!-- 2.void update(DictionaryDetail dictionaryDetail); -->
+    <update id="update">
+        update t_systemdictionarydetail set name=#{name} where id=#{id};
+    </update>
+
+    <!-- 3.void delete(Long id); -->
+    <delete id="delete">
+        DELETE FROM t_systemdictionarydetail where id=#{id};
+    </delete>
+
+    <!-- 4.DictionaryDetail findOne(Long id); -->
+    <select id="findOne" resultType="DictionaryDetail">
+        select * from t_systemdictionarydetail where id=#{id};
+    </select>
+
+    <!-- 5.List<DictionaryDetail> findAll(); -->
+    <select id="findAll" resultType="DictionaryDetail">
+        select * from t_systemdictionarydetail
+    </select>
+
+    <!-- 6.void batchRemove(Long... ids); -->
+    <delete id="batchRemove">
+        DELETE FROM t_systemdictionarydetail WHERE id IN
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--
+        7./** 分页查询 */
+            Long findCount(DictionaryDetailQuery query);
+            List<DictionaryDetail> queryPage(DictionaryDetailQuery query);
+    -->
+    <select id="findCount" resultType="long">
+        SELECT count(*) FROM t_systemdictionarydetail
+        WHERE types_id = #{id}
+    </select>
+    <select id="queryPage" resultType="DictionaryDetail">
+        SELECT * FROM t_systemdictionarydetail
+        WHERE types_id = #{id}
+        LIMIT #{start}, #{pageSize}
+    </select>
+
+    <!--<sql id="detailSql">
+        <where>
+            <if test="keywords">
+                AND name LIKE CONCAT('%', #{keywords}, '%')
+            </if>
+        </where>
+    </sql>-->
+    
+
+</mapper>
