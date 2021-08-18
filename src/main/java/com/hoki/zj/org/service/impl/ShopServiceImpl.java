@@ -139,7 +139,7 @@ public class ShopServiceImpl extends BaseServiceImpl<Shop> implements IShopServi
         String from = "zj93830@sina.cn";
         String text = "<img src='https://iknow-pic.cdn.bcebos.com/2f738bd4b31c8701bbed72b1237f9e2f0708ff0a'/>" +
                         "<h1>审核通过,欢迎加入宠物之家</h1></hr>" +
-                        "<span style=color: 'orange'><a href='http://127.0.0.1:8080/emp/change/"+ id +"'>点击激活</a></span>";
+                        "<span style=color: 'orange'><a href='http://127.0.0.1:8080/emp/change/"+ admin_id +"'>点击激活</a></span>";
         File file = new File("D:\\picture\\newyear.jpg");
         String to = email;
 
