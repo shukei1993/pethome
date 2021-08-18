@@ -6,6 +6,9 @@ import lombok.Data;
 @Data
 public class ShopQuery extends BaseQuery {
 
-    /** 高级查询 */
+    /** 关键字查询 */
     private String keywords;
+
+    /** 状态查询 */
+    private Integer state;
 }

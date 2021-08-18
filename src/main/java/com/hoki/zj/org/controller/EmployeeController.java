@@ -106,4 +106,20 @@ public class EmployeeController {
             return AjaxResult.me().setSuccess(false).setMessage(e.getMessage());
         }
     }
+
+    /**
+     * 店铺审核通过,激活店铺管理账户
+     * @param id
+     * @return
+     */
+    @GetMapping("/change/{id}")
+    public AjaxResult changeStateByEmpId(@PathVariable("id") Long id) {
+        try {
+            employeeService.changeStateByEmpId(id);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage(e.getMessage());
+        }
+    }
 }

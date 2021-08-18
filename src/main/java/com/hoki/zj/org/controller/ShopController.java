@@ -1,6 +1,7 @@
 package com.hoki.zj.org.controller;
 
 import com.hoki.zj.org.domain.Shop;
+import com.hoki.zj.org.domain.ShopLog;
 import com.hoki.zj.org.query.ShopQuery;
 import com.hoki.zj.org.service.IShopService;
 import com.hoki.zj.utils.AjaxResult;
@@ -80,5 +81,71 @@ public class ShopController {
     @PostMapping
     public QueryResult<Shop> queryPageForShop(@RequestBody ShopQuery shopQuery) {
         return shopService.queryPage(shopQuery);
+    }
+
+    /**
+     * 6.入驻功能
+     * @param shop
+     * @return
+     */
+    @PostMapping("/settlement")
+    public AjaxResult settlement(@RequestBody Shop shop) {
+        try {
+            shopService.settlement(shop);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxResult(e.getMessage());
+        }
+    }
+
+    /**
+     * 7.审核驳回功能
+     * @param shopLog  shop_id   note
+     * @return
+     */
+    @PostMapping("/reject")
+    public AjaxResult reject(@RequestBody ShopLog shopLog) {
+        try {
+            // 调用驳回方法
+            shopService.reject(shopLog);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxResult(e.getMessage());
+        }
+    }
+
+    /**
+     * 8.审核通过功能
+     * @param shopLog shop_id note:null
+     * @return
+     */
+    @PostMapping("/pass")
+    public AjaxResult pass(@RequestBody ShopLog shopLog) {
+        try {
+            // 调用通过方法
+            shopService.pass(shopLog);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxResult(e.getMessage());
+        }
+    }
+
+    /**
+     * 9.审核驳回,修改再提交
+     * @param shop
+     * @return
+     */
+    @PostMapping("/reSettlement")
+    public AjaxResult reSettlement(@RequestBody Shop shop) {
+        try {
+            shopService.reSettlement(shop);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxResult(e.getMessage());
+        }
     }
 }

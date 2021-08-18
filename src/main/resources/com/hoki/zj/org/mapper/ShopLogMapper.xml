@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.org.mapper.ShopLogMapper">
+    <!-- 添加日志save -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO t_shop_log (employee_id, checkTime, shop_id, note)
+        VALUES (
+            #{employee.id},
+            #{checkTime},
+            #{shop_id},
+            #{note}
+        );
+    </insert>
+</mapper>

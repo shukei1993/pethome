@@ -16,4 +16,16 @@ import java.util.List;
 @Service
 public class EmployeeServiceImpl extends BaseServiceImpl<Employee> implements IEmployeeService {
 
+    /**
+     * 审核通过修改用户状态
+     * @param id
+     */
+    @Override
+    public void changeStateByEmpId(Long id) {
+        // 根据id查询employee对象
+        Employee employee = super.findOne(id);
+        // 设置状态为1,修改到数据库
+        employee.setState(1);
+        super.update(employee);
+    }
 }

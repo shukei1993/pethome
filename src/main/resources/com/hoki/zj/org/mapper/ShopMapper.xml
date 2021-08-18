@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hoki.zj.org.mapper.ShopMapper">
     <!-- 1.添加 save -->
-    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         INSERT INTO t_shop (name, tel, registerTime, state, address, logo, admin_id)
         VALUES (
             #{name},
@@ -11,7 +11,7 @@
             #{state},
             #{address},
             #{logo},
-            #{admin_id}
+            #{admin.id}
         )
     </insert>
 
@@ -23,7 +23,9 @@
             state=#{state},
             address=#{address},
             logo=#{logo},
-            admin_id=#{admin_id}
+            <if test="admin_id != null">
+                admin_id=#{admin_id}
+            </if>
         WHERE id=#{id}
     </update>
 
@@ -61,6 +63,9 @@
         <where>
             <if test="keywords != null and keywords != ''">
                 AND name LIKE CONCAT('%', #{keywords}, '%')
+            </if>
+            <if test="state != null">
+                AND state=#{state}
             </if>
         </where>
     </sql>
