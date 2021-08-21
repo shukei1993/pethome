@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.user.mapper.WxUserMapper">
+    <!--
+        根据openid查询
+        WxUser loadByOpenid(String openid);
+    -->
+    <select id="loadByOpenid" resultMap="WxUserMap">
+        SELECT
+            wx.*,
+            u.id uid,
+            u.phone,
+            u.username,
+            u.email,
+            u.state
+        FROM t_wxuser wx
+            LEFT JOIN t_user u
+                ON u.id = wx.user_id
+        WHERE wx.openid = #{openid}
+    </select>
+    <resultMap id="WxUserMap" type="WxUser">
+        <id column="id" property="id"></id>
+        <result column="openid" property="openid"></result>
+        <result column="nickname" property="nickname"></result>
+        <result column="sex" property="sex"></result>
+        <result column="address" property="address"></result>
+        <result column="headimgurl" property="headimgurl"></result>
+        <result column="unionid" property="unionid"></result>
+        <association property="user" javaType="User">
+            <id column="uid" property="id"></id>
+            <result column="username" property="username"></result>
+            <result column="email" property="email"></result>
+            <result column="phone" property="phone"></result>
+            <result column="state" property="state"></result>
+        </association>
+    </resultMap>
+
+
+    <!-- 保存 wxUserMapper.save(wxUser) -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO t_wxuser (openid, nickname, sex, address, headimgurl, unionid, user_id)
+        VALUES (
+            #{openid},
+            #{nickname},
+            #{sex},
+            #{address},
+            #{headimgurl},
+            #{unionid},
+            #{user.id}
+        );
+    </insert>
+
+
+</mapper>

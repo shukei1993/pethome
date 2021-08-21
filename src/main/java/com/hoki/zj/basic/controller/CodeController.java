@@ -1,6 +1,6 @@
 package com.hoki.zj.basic.controller;
 
-import com.hoki.zj.basic.service.impl.CodeService;
+import com.hoki.zj.basic.service.ICodeService;
 import com.hoki.zj.utils.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +16,11 @@ public class CodeController {
 
     /** 注解注入创建CodeService对象 */
     @Autowired
-    private CodeService codeService;
+    private ICodeService codeService;
 
     /**
      * 1.手机注册,验证码发送
-     * @param map phone codeType
+     * @param map phone codeType: REGISTER_CODE / BIND_CODE
      * @return
      */
     @PostMapping("/sendCode")

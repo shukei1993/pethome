@@ -14,7 +14,7 @@ public class RedisTemplateTest extends BaseTest {
     public void test1() throws Exception {
         String phoneNum = "13648081039";
         String o = (String)redisTemplate.opsForValue().get(phoneNum);
-
+        System.out.println(o);
     }
 
 }

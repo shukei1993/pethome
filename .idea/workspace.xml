@@ -2,34 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97392ce8-2b32-451a-ad50-1fda6e6a82d0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_0_5_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_29_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_29_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_29_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_29_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_29_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_29_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_1_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_5_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_0_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_0_10_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MSGSenderTool.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/StrUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/shukei.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/interceptor/LoginInterceptor.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/ICodeService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/MyInterceptorConfig.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/constant/CodeTypeConst.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/constant/WeChatConst.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/login/domain/LoginInfo.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/login/mapper/LoginInfoMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/controller/UserController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/controller/WxUserController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/User.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/WxUser.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/dto/UserDTO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/mapper/UserMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/mapper/WxUserMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/query/UserQuery.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/IUserService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/IWxUserService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/UserServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/WxUserServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/HttpUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MD5Utils.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/login/mapper/LoginInfoMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/UserMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/WxUserMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f00e5a92-b1b0-432e-815b-865e53f59958.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/f00e5a92-b1b0-432e-815b-865e53f59958.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pethome.iml" afterPath="$PROJECT_DIR$/pethome.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/GlobalCorsConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/GlobalCorsConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,11 +78,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="CodeService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java">
+      <file leaf-file-name="WxUserServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/WxUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="37" column="9" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="281">
+              <caret line="98" column="7" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -85,8 +93,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Mapper.xml" />
         <option value="HTML File" />
+        <option value="Mapper.xml" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -100,6 +108,9 @@
       <find>DictionaryType</find>
       <find>uo</find>
       <find>opsForValue</find>
+      <find>u</find>
+      <find>map</find>
+      <find>System.</find>
     </findStrings>
     <replaceStrings>
       <replace>t</replace>
@@ -115,7 +126,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/WxUserServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/EmployeeServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/DepartmentServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java" root0="SKIP_INSPECTION" />
@@ -126,37 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryTypeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryTypeQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryTypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryTypeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryTypeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryTypeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/mapper/DictionaryDetailMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/IDictionaryDetailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/service/impl/DictionaryDetailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/controller/DictionaryDetController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/query/DictionaryDetailQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/system/domain/DictionaryDetail.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryDetailMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/query/ShopQuery.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_1.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/RejestLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/ShopLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/ShopLogMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopLogMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IShopLogService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopLogController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopLogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/Shop.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/mailTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MailSender.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/MailTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MailSenderTool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IEmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/EmployeeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/a.html" />
         <option value="$PROJECT_DIR$/src/main/resources/fdfs_client.conf" />
@@ -167,15 +150,46 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/StrUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/RedisUtils.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MSGSenderTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/GlobalCorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/RedisTemplateTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/ICodeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/query/UserQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/dto/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MD5Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/login/mapper/LoginMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/login/mapper/LoginMapperInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/login/LoginInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/IUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/login/domain/LoginInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/WxUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/HttpUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/constant/AccessTokenConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/config/MyInterceptorConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/constant/AccessTokenConst.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/mapper/WxUserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/constant/CodeTypeConst.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/IWxUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/constant/AccessTokenConst.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/login/mapper/LoginInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/controller/WxUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/login/mapper/LoginInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/WxUserMapper.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_2.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/WxUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java" />
       </list>
     </option>
@@ -193,9 +207,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="61" />
-    <option name="y" value="51" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="76" />
+    <option name="y" value="12" />
     <option name="width" value="1739" />
     <option name="height" value="1029" />
   </component>
@@ -242,8 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -278,11 +292,20 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zj" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pethome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pethome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zj" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,10 +322,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.hoki.zj.org.service.impl" />
-      <recent name="com.hoki.zj.system.service.impl" />
-      <recent name="com.hoki.zj.basic.service.impl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\resources\com\hoki\zj\login\mapper" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hoki.zj" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\java\com\hoki\zj\utils" />
+      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\resources\com\hoki\zj\system\mapper" />
+      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\java\com\hoki\zj\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hoki.zj.org.domain" />
@@ -311,10 +340,12 @@
       <recent name="com.hoki.zj.system.mapper" />
       <recent name="com.hoki.zj.org.query" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\java\com\hoki\zj\utils" />
-      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\resources\com\hoki\zj\system\mapper" />
-      <recent name="D:\software\Java\IDEA\idea_worksapce_2017\pethome\src\main\java\com\hoki\zj\config" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hoki.zj.user.service.impl" />
+      <recent name="com.hoki.zj.user.domain.dto" />
+      <recent name="com.hoki.zj.org.service.impl" />
+      <recent name="com.hoki.zj.system.service.impl" />
+      <recent name="com.hoki.zj.basic.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -329,7 +360,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RedisTemplateTest.test1">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -513,8 +544,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RedisTemplateTest.test1" />
-        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="0" class="java.lang.String" itemvalue="Application.App" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RedisTemplateTest.test1" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.MailTest.test1" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.DepartmentTest.testFind" />
       </list>
@@ -564,7 +595,10 @@
       <workItem from="1629181684837" duration="5000" />
       <workItem from="1629193911845" duration="2289000" />
       <workItem from="1629198722065" duration="1658000" />
-      <workItem from="1629273237251" duration="18539000" />
+      <workItem from="1629273237251" duration="18578000" />
+      <workItem from="1629334879515" duration="21925000" />
+      <workItem from="1629419459300" duration="13174000" />
+      <workItem from="1629502027478" duration="31959000" />
     </task>
     <task id="LOCAL-00001" summary="后端开发(shop模块)第一次上传">
       <created>1628769343338</created>
@@ -594,19 +628,17 @@
       <option name="project" value="LOCAL" />
       <updated>1629276385873</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="后端pethome门店入驻,审核功能">
+      <created>1629294851918</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629294851918</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RedisTemplateTest_test1 - 2021.08.18 at 19h 16m 23s.xml">
-      <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RedisTemplateTest_test1 - 2021.08.18 at 19h 22m 54s.xml">
-      <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RedisTemplateTest_test1 - 2021.08.18 at 19h 23m 13s.xml">
-      <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RedisTemplateTest_test1 - 2021.08.18 at 19h 24m 58s.xml">
       <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
     </history-entry>
@@ -628,9 +660,18 @@
     <history-entry file="RedisTemplateTest_test1 - 2021.08.18 at 19h 50m 32s.xml">
       <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RedisTemplateTest_test1 - 2021.08.19 at 13h 02m 36s.xml">
+      <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTemplateTest_test1 - 2021.08.19 at 13h 03m 03s.xml">
+      <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RedisTemplateTest_test1 - 2021.08.19 at 13h 03m 27s.xml">
+      <configuration name="RedisTemplateTest.test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167218000" />
+    <option name="totallyTimeSpent" value="234315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -642,29 +683,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="51" width="1739" height="1029" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6004785" sideWeight="0.50695705" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24309392" sideWeight="0.5134989" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829374" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32775378" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22300217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32596686" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486188" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43425414" sideWeight="0.49304295" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8419889" sideWeight="0.48650107" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19116758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4077348" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19330454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970357" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32265192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -675,36 +717,35 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5922652" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6004785" sideWeight="0.50695705" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24309392" sideWeight="0.5134989" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829374" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32775378" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22300217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32596686" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486188" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43425414" sideWeight="0.49304295" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.84210527" sideWeight="0.48650107" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5922652" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19168466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4077348" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19330454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970357" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32265192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -727,7 +768,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -736,233 +777,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/EmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1500">
-          <caret line="4" column="62" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/RejestLog.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/domain/BaseDomain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/mapper/BaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IShopLogService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/controller/ShopLogController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/IBaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopLogServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.9.RELEASE/spring-context-support-5.0.9.RELEASE.jar!/org/springframework/mail/javamail/MimeMessageHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../jdk8/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="274" column="11" lean-forward="false" selection-start-line="274" selection-start-column="11" selection-end-line="274" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/AjaxResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/QueryResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hoki/zj/test/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MailSenderTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/MailTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/domain/ShopLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/a.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IEmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fdfs_client.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/FastdfsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="108" column="36" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/mapper/ShopLogMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/IShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopLogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <marker date="1629112780770" expanded="true" signature="314:501" ph="INSERT INTO t_shop_log... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <marker date="1629136241307" expanded="true" signature="312:576" ph="INSERT INTO t_shop... " />
-            <marker date="1629136241307" expanded="true" signature="649:921" ph="UPDATE t_shop... " />
-            <marker date="1629136241307" expanded="true" signature="996:1029" ph="DELETE FROM t_shop... " />
-            <marker date="1629136241307" expanded="true" signature="1128:1163" ph="SELECT * FRO... t_shop" />
-            <marker date="1629136241307" expanded="true" signature="1263:1283" ph="SELECT * FRO... t_shop" />
-            <marker date="1629136241307" expanded="true" signature="1458:1485" ph="SELECT COUNT... t_shop" />
-            <marker date="1629136241307" expanded="true" signature="1598:1698" ph="SELECT * FRO... t_shop" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_shop">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/StrUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1137">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/RedisUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/config/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/DepartmentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MSGSenderTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.10.RELEASE/spring-data-redis-2.0.10.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="542" column="0" lean-forward="false" selection-start-line="542" selection-start-column="0" selection-end-line="542" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,9 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#1657#1658#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,17 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,13 +803,6 @@
         <state relative-caret-position="210">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1021,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3327">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,18 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_employee">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/FastDfsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="51" column="41" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,48 +846,339 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hoki/zj/test/org/RedisTemplateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_shop">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/MD5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="25" column="32" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="672">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.9.RELEASE/spring-tx-5.0.9.RELEASE-sources.jar!/org/springframework/transaction/annotation/Transactional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/config/GlobalCorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/query/UserQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="88" column="29" lean-forward="true" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="29" />
+        <state relative-caret-position="753">
+          <caret line="105" column="27" lean-forward="false" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/config/MyInterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/mapper/WxUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/org/service/impl/ShopServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="-330">
           <caret line="118" column="27" lean-forward="true" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/utils/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/ICodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/constant/CodeTypeConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/IWxUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/constant/WeChatConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="122" lean-forward="false" selection-start-line="7" selection-start-column="116" selection-end-line="7" selection-end-column="122" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/controller/CodeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="183">
+          <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/login/mapper/LoginInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/controller/WxUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="31" column="54" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1629365614301" expanded="true" signature="303:344" ph="SELECT * FRO... t_user" />
+            <marker date="1629365614301" expanded="true" signature="465:835" ph="INSERT INTO t_user... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_wxuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a6ca1fe0/f00e5a92-b1b0-432e-815b-865e53f59958/pethome.t_logininfo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f00e5a92-b1b0-432e-815b-865e53f59958/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/WxUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <marker date="1629551239296" expanded="true" signature="346:571" ph="SELECT * FRO... t_wxuser" />
+            <marker date="1629551239296" expanded="true" signature="346:607" ph="SELECT wx.*,... t_wxuser" />
+            <marker date="1629551239296" expanded="true" signature="1609:1885" ph="insert into t_wxuser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/login/mapper/LoginInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <marker date="1629550538776" expanded="true" signature="341:631" ph="INSERT INTO t_logininfo... " />
+            <marker date="1629550538776" expanded="true" signature="819:967" ph="SELECT * FRO... t_logininfo" />
+            <marker date="1629550538776" expanded="true" signature="1118:1191" ph="SELECT * FRO... t_logininfo" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/login/domain/LoginInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/domain/WxUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="108" column="29" lean-forward="true" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/basic/service/impl/CodeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="-120">
+          <caret line="56" column="94" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hoki/zj/user/service/impl/WxUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="98" column="7" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="93" />
           <folding />
         </state>
       </provider>
