@@ -1,6 +1,8 @@
 package com.hoki.zj.org.service.impl;
 
 import com.hoki.zj.basic.service.impl.BaseServiceImpl;
+import com.hoki.zj.login.domain.LoginInfo;
+import com.hoki.zj.login.mapper.LoginInfoMapper;
 import com.hoki.zj.org.domain.Employee;
 import com.hoki.zj.org.domain.Shop;
 import com.hoki.zj.org.domain.ShopLog;
@@ -34,6 +36,10 @@ public class ShopServiceImpl extends BaseServiceImpl<Shop> implements IShopServi
     @Autowired
     private JavaMailSender javaMailSender;
 
+    /** 注解注入LoginInfoMapper对象 */
+    @Autowired
+    private LoginInfoMapper loginInfoMapper;
+
     // 创建工具类对象
     MailSenderTool mailSenderTool = new MailSenderTool();
 
@@ -52,8 +58,23 @@ public class ShopServiceImpl extends BaseServiceImpl<Shop> implements IShopServi
         shop.getAdmin().setState(0);
         // 先保存employee对象,需要其返回的主键
         employeeMapper.save(shop.getAdmin());
+        // employ对象转为login Info对象并保存,此时admin_id已经有值
+        LoginInfo loginInfo = employee2LoginInfo(shop.getAdmin());
+        loginInfoMapper.save(loginInfo);
         // 再保存shop,此时admin_id已经有值
         super.save(shop);
+    }
+    // 将emp对象转为loginInfo对象
+    private LoginInfo employee2LoginInfo(Employee admin) {
+        LoginInfo loginInfo = new LoginInfo();
+        loginInfo.setUsername(admin.getUsername());// 设置用户名
+        loginInfo.setPhone(admin.getPhone()); // 设置电话
+        loginInfo.setEmail(admin.getEmail()); // 设置邮箱
+        loginInfo.setPassword(admin.getPassword()); // 设置密码
+        loginInfo.setType(0); // 设置为后台用户
+        loginInfo.setDisable(0); // 设置状态为待激活
+        loginInfo.setUid(admin.getId()); // 设置uid,关联的emp
+        return loginInfo;
     }
 
     /**

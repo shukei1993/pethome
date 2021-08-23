@@ -21,4 +21,9 @@
                 #{headImg}
             )
     </insert>
+
+    <select id="findOne" resultType="User">
+        SELECT * FROM t_user WHERE id=#{uid}
+    </select>
+    
 </mapper>

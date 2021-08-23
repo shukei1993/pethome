@@ -16,6 +16,20 @@
         )
     </insert>
 
+    <!-- loginInfoMapper.update(loginInfo); -->
+    <update id="update">
+        update t_logininfo
+        SET username=#{username},
+            phone=#{phone},
+            email=#{email},
+            password=#{password},
+            type=#{type},
+            disable=#{disable},
+            salt=#{salt},
+            uid=#{uid}
+        where uid = #{uid}
+    </update>
+
     <!--根据用户名或邮箱或手机查询所有激活的LoginInfo
     LoginInfo loadByUserNameOrEmailOrPhone(User user);-->
     <select id="loadByUserNameOrEmailOrPhone" resultType="LoginInfo">
@@ -26,6 +40,16 @@
     </select>
 
     <!--
+        查询后台用户的登录信息
+        LoginInfo loadByUidOfEmp(Long id);
+     -->
+    <select id="loadByUidOfEmp" resultType="LoginInfo">
+        SELECT *
+        FROM t_logininfo
+        WHERE uid=#{id}
+    </select>
+
+    <!--
         根据uid查询登录信息
         LoginInfo loadByUid(Long id);
      -->
@@ -33,5 +57,14 @@
         SELECT *
         FROM t_logininfo
         WHERE uid=#{id} AND disable = 1
+    </select>
+
+    <!--
+        根据后台用户名查询
+        LoginInfo loadByUserNameOfEmp(String username);
+     -->
+    <select id="loadByUserNameOfEmp" resultType="LoginInfo">
+        SELECT * FROM t_logininfo
+        WHERE username=#{username} AND disable = 1
     </select>
 </mapper>

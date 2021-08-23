@@ -2417,7 +2417,7 @@ permission_id</ColNames>
     </column>
     <column id="509" parent="234" name="user_id">
       <Position>12</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>bigint(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="510" parent="234" name="shop_id">

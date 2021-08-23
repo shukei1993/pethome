@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 //@CrossOrigin // 添加响应头Access-Control-Allow-Origin,实现跨域,一般不推荐,使用配置类可以应用于所有controller
 @RestController // @Controller + @ResponseBody
@@ -120,6 +121,24 @@ public class EmployeeController {
         } catch (Exception e) {
             e.printStackTrace();
             return AjaxResult.me().setSuccess(false).setMessage(e.getMessage());
+        }
+    }
+
+    /**
+     * 后台用户登录
+     * @param map
+     * @return
+     */
+    @PostMapping("/login")
+    public AjaxResult login(@RequestBody Map<String, String> map) {
+        try {
+//            System.out.println(map);
+            Map<String, Object> returnMap = employeeService.login(map);
+            // 将返回的returnMap返回给前端
+            return AjaxResult.me().setResultObj(returnMap);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxResult(e.getMessage());
         }
     }
 }

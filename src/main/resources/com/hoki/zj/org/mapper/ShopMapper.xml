@@ -69,4 +69,10 @@
             </if>
         </where>
     </sql>
+
+
+    <!-- 根据adminid查询 -->
+    <select id="loadByAdminId" resultType="Shop">
+        SELECT * FROM t_shop WHERE admin_id=#{id}
+    </select>
 </mapper>
