@@ -45,11 +45,10 @@ public class FastDfsController {
     @ResponseBody
     public AjaxResult deleteFile(@RequestParam(required = true,value = "path") String path) {
         try {
-            String pathTmp = path.substring(1);
-            String groupName =  pathTmp.substring(0, pathTmp.indexOf("/")); // group1
-            String remotePath = pathTmp.substring(pathTmp.indexOf("/")+1); // M00/00/FA/rBE3kWEcwCCAIxTSAAMVTsEOyAA136.png
-            System.out.println(groupName);
-            System.out.println(remotePath);
+            String substring = path.substring(path.lastIndexOf("//"));
+            String[] split = substring.split("/");
+            String remotePath = substring.split("//group1/")[1];
+            String groupName = split[2];
             FastdfsUtils.delete(groupName, remotePath);
             return  AjaxResult.me();
         } catch (Exception e) {

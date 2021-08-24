@@ -30,13 +30,13 @@
         where uid = #{uid}
     </update>
 
-    <!--根据用户名或邮箱或手机查询所有激活的LoginInfo
+    <!--前台:根据用户名或邮箱或手机查询所有激活的LoginInfo
     LoginInfo loadByUserNameOrEmailOrPhone(User user);-->
     <select id="loadByUserNameOrEmailOrPhone" resultType="LoginInfo">
         SELECT *
         FROM t_logininfo
         WHERE (username = #{username} OR email = #{username} OR phone = #{username})
-              AND disable = 1
+              AND disable = 1 AND type = 1
     </select>
 
     <!--

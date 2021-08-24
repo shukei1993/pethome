@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.pet.mapper.PetDetailMapper">
+    <!-- save -->
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_pet_detail (pet_id, adoptNotice, intro)
+        VALUES (
+            #{pet_id},
+            #{adoptNotice},
+            #{intro}
+        )
+    </insert>
+
+    <!-- 修改 -->
+    <update id="update">
+        UPDATE t_pet_detail
+        SET
+        intro=#{intro},
+        adoptNotice=#{adoptNotice}
+        WHERE id = #{id}
+    </update>
+</mapper>

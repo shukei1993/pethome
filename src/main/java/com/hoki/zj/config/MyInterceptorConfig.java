@@ -25,8 +25,10 @@ public class MyInterceptorConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/**") // 拦截所有请求
                 .excludePathPatterns("/user/login") // 放行登陆
+                .excludePathPatterns("/emp/login") // 放行登陆
                 .excludePathPatterns("/code/sendCode") // 放行验证码发送
                 .excludePathPatterns("/user/register") // 放行注册
-                .excludePathPatterns("/wechat/**"); // 放行所有微信请求
+                .excludePathPatterns("/wechat/**") // 放行所有微信请求
+                .excludePathPatterns("/fastDfs/**"); // 放行所有fastDfs请求
     }
 }
