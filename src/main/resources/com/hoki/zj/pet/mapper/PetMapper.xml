@@ -37,6 +37,20 @@
         </association>
     </resultMap>
 
+    <!--
+        void loadByPetId(Long id);
+        前台根据id展示详情数据
+    -->
+    <select id="loadByPetId" resultMap="PetMap">
+        SELECT
+            p.*,
+            d.id did,
+            d.adoptNotice,
+            d.intro
+        FROM t_pet p LEFT JOIN t_pet_detail d ON p.id = d.pet_id
+        WHERE p.id = #{id}
+    </select>
+
     <sql id="querySql">
         <where>
             <if test="shop_id != null">

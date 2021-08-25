@@ -90,6 +90,15 @@ public class PetServiceImpl extends BaseServiceImpl<Pet> implements IPetService 
     }
 
     /**
+     * 前台根据id展示详情数据
+     * @param id
+     */
+    @Override
+    public Pet loadByPetId(Long id) {
+       return petMapper.loadByPetId(id);
+    }
+
+    /**
      * 修改方法
      * @param pet
      */

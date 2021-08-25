@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * 拦截器配置类:MyInterceptorConfig
  */
-//@Configuration
+@Configuration
 public class MyInterceptorConfig implements WebMvcConfigurer {
 
     /** 注解注入创建LoginInterceptor对象 */
@@ -29,6 +29,8 @@ public class MyInterceptorConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/code/sendCode") // 放行验证码发送
                 .excludePathPatterns("/user/register") // 放行注册
                 .excludePathPatterns("/wechat/**") // 放行所有微信请求
-                .excludePathPatterns("/fastDfs/**"); // 放行所有fastDfs请求
+                .excludePathPatterns("/fastDfs/**") // 放行所有fastDfs请求
+                .excludePathPatterns("/pet/front")
+                .excludePathPatterns("/pet/detail/**");
     }
 }

@@ -8,4 +8,7 @@ public interface PetMapper extends BaseMapper<Pet> {
     void onSale(Long... ids);
 
     void offSale(Long... ids);
+
+    /** 前台根据id展示详情数据 */
+    Pet loadByPetId(Long id);
 }

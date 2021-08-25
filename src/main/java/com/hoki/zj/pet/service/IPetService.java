@@ -20,4 +20,7 @@ public interface IPetService extends IBaseService<Pet> {
 
     /** 下架 */
     void offSale(Long... ids);
+
+    /** 前台根据id展示详情数据 */
+    Pet loadByPetId(Long id);
 }

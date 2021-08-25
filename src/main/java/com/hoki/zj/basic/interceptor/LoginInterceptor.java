@@ -28,12 +28,14 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 1.获取请求头中的TOKEN
         String token = request.getHeader("TOKEN");
-        // 2.根据token查询redis中是否有值
-        Object o = redisTemplate.opsForValue().get(token);
-        if (o != null) { // redis中有值
-            // 刷新过期时间
-            redisTemplate.opsForValue().set(token, o, 30, TimeUnit.MINUTES);
-            return true; // 放行
+        if (token != null) {
+            // 2.根据token查询redis中是否有值
+            Object o = redisTemplate.opsForValue().get(token);
+            if (o != null) { // redis中有值
+                // 刷新过期时间
+                redisTemplate.opsForValue().set(token, o, 30, TimeUnit.MINUTES);
+                return true; // 放行
+            }
         }
         // 3.没有值,响应对象设置字符集和返回数据格式json
         response.setContentType("application/json;charset=utf-8");

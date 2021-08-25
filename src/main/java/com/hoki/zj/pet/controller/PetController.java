@@ -85,4 +85,24 @@ public class PetController {
         }
     }
 
+    /**
+     * 4.前台宠物领养分页展示
+     * @param petQuery
+     * @return
+     */
+    @PostMapping("/front")
+    public QueryResult<Pet> queryPage(@RequestBody PetQuery petQuery) {
+        return petService.queryPage(petQuery);
+    }
+
+    /**
+     * 5.详情页面展示
+     * @param id
+     * @return
+     */
+    @GetMapping("/detail/{id}")
+    public Pet loadByPetIdForFront(@PathVariable("id") Long id) {
+        return petService.loadByPetId(id);
+    }
+
 }
