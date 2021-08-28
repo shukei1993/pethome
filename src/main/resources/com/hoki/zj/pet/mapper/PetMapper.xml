@@ -98,8 +98,8 @@
     <update id="onSale">
         UPDATE t_pet
         SET
-            state      = 1,
-            onsaletime = sysdate()
+        state = 1,
+        onsaletime = sysdate()
         WHERE id IN
         <foreach collection="array" item="id" separator="," open="(" close=")">
             #{id}
@@ -109,7 +109,7 @@
     <update id="offSale">
         UPDATE t_pet
         SET
-        state      = 0,
+        state = 0,
         offsaletime = sysdate()
         WHERE id IN
         <foreach collection="array" item="id" separator="," open="(" close=")">

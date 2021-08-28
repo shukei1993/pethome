@@ -84,6 +84,10 @@ public class PetServiceImpl extends BaseServiceImpl<Pet> implements IPetService 
         petMapper.onSale(ids);
     }
 
+    /**
+     * 下架
+     * @param ids
+     */
     @Override
     public void offSale(Long... ids) {
         petMapper.offSale(ids);
