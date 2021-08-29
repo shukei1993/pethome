@@ -12,6 +12,8 @@ import com.hoki.zj.pay.mapper.PayBillMapper;
 import com.hoki.zj.pay.service.IPayService;
 import com.hoki.zj.pet.domain.Pet;
 import com.hoki.zj.pet.mapper.PetMapper;
+import com.hoki.zj.quartz.domain.QuartzJobInfo;
+import com.hoki.zj.quartz.service.IQuartzService;
 import com.hoki.zj.user.domain.User;
 import com.hoki.zj.user.domain.UserAddress;
 import com.hoki.zj.user.mapper.UserAddressMapper;
@@ -21,10 +23,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 @Service
@@ -54,6 +56,10 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
     @Autowired
     private AdoptMapper adoptMapper;
 
+    /** 注解注入定时任务业务接口对象 */
+    @Autowired
+    private IQuartzService quartzService;
+
     /**
      * 1.生成领养订单
      *  下架对应宠物
@@ -81,7 +87,7 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
         AdoptOrder adoptOrder = createAdoptOrder(user, pet);
         adoptOrder.setPet_id(pet_id); // 设置宠物id
         // 设置最终支付时间
-        adoptOrder.setLastPayTime(new Date(System.currentTimeMillis() + (30 * 60 * 1000)));
+        adoptOrder.setLastPayTime(new Date(System.currentTimeMillis() + (1 * 60 * 1000)));
         // 保存到数据库t_order_adopt,并返回生成的主键
         super.save(adoptOrder);
 
@@ -97,6 +103,17 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
         payBillMapper.save(payBill);
         // 7.调用方法支付
         String result = payService.pay(payBill);
+
+        // 8.添加订单定时任务
+        QuartzJobInfo quartzJobInfo = new QuartzJobInfo(); // 创建QuartzJobInfo对象
+        quartzJobInfo.setJobName(payBill.getOrderSn()); // 设置任务名为当前订单的订单号
+        // 设置携带参数
+        Map params = new HashMap<>(); // 创建一个HashMap对象
+        params.put("orderSn", payBill.getOrderSn()); // 将订单号放入集合
+        quartzJobInfo.setParams(params);
+        quartzJobInfo.setFireDate(payBill.getLastPayTime()); // 设置触发器时间为最终支付时间
+        quartzService.addJob(quartzJobInfo); // 添加定时任务
+
         // 返回调用后的结果
         return result;
     }

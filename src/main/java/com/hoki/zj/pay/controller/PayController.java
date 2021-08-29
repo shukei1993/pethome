@@ -5,6 +5,7 @@ import com.hoki.zj.order.domain.AdoptOrder;
 import com.hoki.zj.order.service.IAdoptService;
 import com.hoki.zj.pay.domain.PayBill;
 import com.hoki.zj.pay.service.IPayBillService;
+import com.hoki.zj.quartz.service.IQuartzService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,10 @@ public class PayController {
     /** 注解注入IAdoptService对象 */
     @Autowired
     private IAdoptService adoptService;
+
+    /** 注解注入定时任务业务接口对象 */
+    @Autowired
+    private IQuartzService quartzService;
 
     /**
      * 1.异步回调
@@ -100,12 +105,14 @@ public class PayController {
                     case BusinessTypeConst.RECHARGEORDER:
                         break;
                 }
-                return "success";
+                // 订单已经支付,取消任务
+                quartzService.cancelJob(out_trade_no);
             }
+            return "success";
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "failed";
+        return "fail";
     }
 
     /**
