@@ -31,6 +31,7 @@ public class MyInterceptorConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/wechat/**") // 放行所有微信请求
                 .excludePathPatterns("/fastDfs/**") // 放行所有fastDfs请求
                 .excludePathPatterns("/pet/front")
-                .excludePathPatterns("/pet/detail/**");
+                .excludePathPatterns("/pet/detail/**")
+                .excludePathPatterns("/pay/**");
     }
 }

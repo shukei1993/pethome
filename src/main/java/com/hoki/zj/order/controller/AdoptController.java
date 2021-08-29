@@ -20,14 +20,19 @@ public class AdoptController {
     private IAdoptService adoptService;
 
     /**
-     * 1.订单生成
+     * 1.领养订单,拉起支付平台页面
      * @param map {pet_id=2, address_id=1, payment_way=AliPay}
-     * @return
+     * @return result
      */
     @PostMapping("/order")
     public AjaxResult createOrder(@RequestBody Map<String, String> map, HttpServletRequest request) {
 //        System.out.println(map);
-        adoptService.createOrder(map, request);
-        return AjaxResult.me();
+        try {
+            String result = adoptService.createOrder(map, request);
+            return AjaxResult.me().setResultObj(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new AjaxResult(e.getMessage());
+        }
     }
 }

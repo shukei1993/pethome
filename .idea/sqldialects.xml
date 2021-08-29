@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/EmployeeMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopLogMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/org/mapper/ShopMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/pay/mapper/AliPayInfoMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/pay/mapper/PayBillMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/permission/mapper/RoleMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/pet/mapper/PetDetailMapper.xml" dialect="MySQL" />

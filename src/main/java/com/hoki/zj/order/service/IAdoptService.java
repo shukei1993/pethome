@@ -8,5 +8,8 @@ import java.util.Map;
 
 public interface IAdoptService extends IBaseService<AdoptOrder> {
     /** 生成领养订单 */
-    void createOrder(Map<String, String> map, HttpServletRequest request);
+    String createOrder(Map<String, String> map, HttpServletRequest request);
+
+    /** 根据订单号获取订单对象 */
+    AdoptOrder loadByOrderSn(String orderSn);
 }

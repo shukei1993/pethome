@@ -21,4 +21,23 @@
             #{orderSn}
         );
     </insert>
+
+    <!--
+        2.根据订单号查询支付单信息
+        PayBill loadByOrderSn(String trade_no);
+    -->
+    <select id="loadByOrderSn" resultType="PayBill">
+        SELECT *
+        FROM t_pay_bill
+        WHERE orderSn = #{orderSn}
+    </select>
+
+    <!-- 3.更新支付单,状态/修改时间/支付编号 -->
+    <update id="update">
+        UPDATE t_pay_bill
+        SET state      = #{state},
+            updateTime = #{updateTime},
+            unionPaySn = #{unionPaySn}
+        WHERE id = #{id};
+    </update>
 </mapper>

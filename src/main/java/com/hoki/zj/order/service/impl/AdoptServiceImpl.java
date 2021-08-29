@@ -1,6 +1,7 @@
 package com.hoki.zj.order.service.impl;
 
 import com.hoki.zj.basic.service.impl.BaseServiceImpl;
+import com.hoki.zj.constant.BusinessTypeConst;
 import com.hoki.zj.order.domain.AdoptOrder;
 import com.hoki.zj.order.domain.OrderAddress;
 import com.hoki.zj.order.mapper.AdoptMapper;
@@ -8,6 +9,7 @@ import com.hoki.zj.order.mapper.OrderAddressMapper;
 import com.hoki.zj.order.service.IAdoptService;
 import com.hoki.zj.pay.domain.PayBill;
 import com.hoki.zj.pay.mapper.PayBillMapper;
+import com.hoki.zj.pay.service.IPayService;
 import com.hoki.zj.pet.domain.Pet;
 import com.hoki.zj.pet.mapper.PetMapper;
 import com.hoki.zj.user.domain.User;
@@ -44,6 +46,14 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
     @Autowired
     private PayBillMapper payBillMapper;
 
+    /** 注解注入IPayService */
+    @Autowired
+    private IPayService payService;
+
+    /** 注解注入AdoptMapper */
+    @Autowired
+    private AdoptMapper adoptMapper;
+
     /**
      * 1.生成领养订单
      *  下架对应宠物
@@ -55,7 +65,7 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
      */
     @Override
     @Transactional
-    public void createOrder(Map<String, String> map, HttpServletRequest request) {
+    public String createOrder(Map<String, String> map, HttpServletRequest request) {
         // 1.调用工具类,获取当前用户(前台)的登录信息
         User user = (User) GetUserOrEmpContentTools.GetCurrentConsumer(request);
         // 2.获取map中的参数
@@ -83,8 +93,12 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
 
         // 5.生成对应的账单
         PayBill payBill = createPayBill(adoptOrder, payment_way);
-        // 保存到数据库
+        // 6.保存到数据库
         payBillMapper.save(payBill);
+        // 7.调用方法支付
+        String result = payService.pay(payBill);
+        // 返回调用后的结果
+        return result;
     }
 
     // 封装生成账单的方法
@@ -103,6 +117,9 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
 //        private Long businessKey;
         payBill.setShop_id(adoptOrder.getShop_id()); // 设置店铺
         payBill.setOrderSn(adoptOrder.getOrderSn()); // 设置订单编号
+        // 设置订单的类型用于定位
+        payBill.setBusinessKey(adoptOrder.getId());
+        payBill.setBusinessType(BusinessTypeConst.ADOPTORDER);
         return payBill;
     }
 
@@ -131,5 +148,15 @@ public class AdoptServiceImpl extends BaseServiceImpl<AdoptOrder> implements IAd
         adoptOrder.setOrderSn(orderSn);
         // address_id?
         return adoptOrder;
+    }
+
+    /**
+     * 根据交易订单号查询订单对象
+     * @param orderSn
+     * @return
+     */
+    @Override
+    public AdoptOrder loadByOrderSn(String orderSn) {
+        return adoptMapper.loadByOrderSn(orderSn);
     }
 }

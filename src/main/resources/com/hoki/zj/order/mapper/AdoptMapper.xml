@@ -18,4 +18,25 @@
             #{address_id}
         );
     </insert>
+
+    <!--
+        2.根据交易订单号查询订单对象
+        AdoptOrder loadByOrderSn(String orderSn);
+    -->
+    <select id="loadByOrderSn" resultType="AdoptOrder">
+        SELECT *
+        FROM t_order_adopt
+        WHERE orderSn = #{orderSn}
+    </select>
+
+    <!--
+        3.更新领养订单状态和支付编号
+    -->
+    <update id="update">
+        UPDATE t_order_adopt
+        SET
+            state = #{state},
+            paySn = #{paySn}
+        WHERE id = #{id}
+    </update>
 </mapper>
