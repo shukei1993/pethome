@@ -32,6 +32,8 @@ public class MyInterceptorConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/fastDfs/**") // 放行所有fastDfs请求
                 .excludePathPatterns("/pet/front")
                 .excludePathPatterns("/pet/detail/**")
-                .excludePathPatterns("/pay/**");
+                .excludePathPatterns("/pay/**")
+                .excludePathPatterns("/product/front")
+                .excludePathPatterns("/product/detail/**");
     }
 }

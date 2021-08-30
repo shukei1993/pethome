@@ -66,13 +66,14 @@ public class PetServiceImpl extends BaseServiceImpl<Pet> implements IPetService 
         pet.setShop_id(shop.getId());
         // 4.设置状态为下架 0
         pet.setState(0);
-        System.out.println("pet===" + pet);
+//        System.out.println("pet===" + pet);
         // 5.调用方法保存,并返回新增的主键
         petMapper.save(pet);
         // 6.设置petDetail中的pet_id
+        PetDetail petDetail = pet.getPetDetail();
         pet.getPetDetail().setPet_id(pet.getId());
         // 7.保存到数据库
-        petDetailMapper.save(pet.getPetDetail());
+        petDetailMapper.save(petDetail);
     }
 
     /**

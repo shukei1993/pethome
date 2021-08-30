@@ -1943,7 +1943,7 @@ role_id</ColNames>
     <column id="424" parent="224" name="unionPaySn">
       <Position>11</Position>
       <Comment>统一支付单号</Comment>
-      <DataType>char(15)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="425" parent="224" name="businessType">
@@ -2182,7 +2182,7 @@ role_id</ColNames>
     <column id="468" parent="229" name="state">
       <Position>7</Position>
       <Comment>状态：0下架 1上架</Comment>
-      <DataType>bigint(2)|0</DataType>
+      <DataType>int(2)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="469" parent="229" name="costprice">

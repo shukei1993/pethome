@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoki.zj.product.mapper.ProductMapper">
+    <!--
+        1.分页/高级查询
+    -->
+    <select id="findCount" resultType="long">
+        SELECT COUNT(*) FROM t_product p LEFT JOIN t_product_detail pd ON p.id = pd.product_id
+        <include refid="productSql"></include>
+    </select>
+    <select id="queryPage" resultMap="ProductMap">
+        SELECT
+        p.*,
+        pd.id pdid,
+        pd.intro,
+        pd.orderNotice
+        FROM t_product p LEFT JOIN t_product_detail pd ON p.id = pd.product_id
+        <include refid="productSql"></include>
+        LIMIT #{start}, #{pageSize}
+    </select>
+    <sql id="productSql">
+        <where>
+            <if test="state != null">
+                AND p.state=#{state}
+            </if>
+            <if test="name != null and name !='' ">
+                AND p.name LIKE CONCAT('%', #{name}, '%')
+            </if>
+        </where>
+    </sql>
+    <resultMap id="ProductMap" type="Product">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="resources" property="resources"></result>
+        <result column="saleprice" property="saleprice"></result>
+        <result column="offsaletime" property="offsaletime"></result>
+        <result column="onsaletime" property="onsaletime"></result>
+        <result column="state" property="state"></result>
+        <result column="costprice" property="costprice"></result>
+        <result column="createtime" property="createtime"></result>
+        <result column="salecount" property="salecount"></result>
+        <association property="productDetail" javaType="ProductDetail">
+            <id column="pdid" property="id"></id>
+            <result column="intro" property="intro"></result>
+            <result column="orderNotice" property="orderNotice"></result>
+        </association>
+    </resultMap>
+
+    <!-- 2. 删除delete -->
+    <delete id="delete">
+        DELETE FROM t_product
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 3.新增服务 -->
+    <insert id="save" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO t_product (name, resources, saleprice, offsaletime, onsaletime, state, costprice, createtime, salecount)
+        VALUES (
+            #{name},
+            #{resources},
+            #{saleprice},
+            #{offsaletime},
+            #{onsaletime},
+            #{state},
+            #{costprice},
+            #{createtime},
+            #{salecount}
+        );
+    </insert>
+
+    <!-- 4.修改 -->
+    <update id="update">
+        UPDATE t_product
+        SET
+            name      = #{name},
+            saleprice = #{saleprice},
+            costprice = #{costprice},
+            resources = #{resources}
+        WHERE id=#{id};
+    </update>
+
+    <!-- 上架 void onSale(Long... ids); -->
+    <update id="onSale">
+        UPDATE t_product
+        SET
+        state = 1,
+        onsaletime = sysdate()
+        WHERE id IN
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <!-- 下架 void offSale(Long... ids); -->
+    <update id="offSale">
+        UPDATE t_product
+        SET
+        state = 0,
+        offsaletime = sysdate()
+        WHERE id IN
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <!--
+        前台根据服务id展示服务详情
+        Product loadByProductId(Long id);
+    -->
+    <select id="loadByProductId" resultMap="ProductMap">
+        SELECT
+            p.*,
+            pd.id pdid,
+            pd.intro,
+            pd.orderNotice
+        FROM t_product p LEFT JOIN t_product_detail pd ON p.id = pd.product_id
+        WHERE p.id=#{id}
+    </select>
+
+</mapper>

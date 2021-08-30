@@ -14,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/pet/mapper/PetDetailMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/pet/mapper/PetMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/pet/mapper/SearchMasterMsgMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/product/mapper/ProductDetailMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/product/mapper/ProductMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryDetailMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/system/mapper/DictionaryTypeMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/com/hoki/zj/user/mapper/UserAddressMapper.xml" dialect="MySQL" />
