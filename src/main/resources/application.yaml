@@ -7,7 +7,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: sakura1993
-    url: jdbc:mysql://localhost:3306/pethome?useUnicode=true&characterEncoding=utf8
+#   local database on windows
+#    url: jdbc:mysql://localhost:3306/pethome?useUnicode=true&characterEncoding=utf8
+    # 3307:3306 on docker-data mysql-data
+    url: jdbc:mysql://localhost:3307/pethome?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
   mail:
     host: smtp.sina.cn # 服务商主机地址
     username: zj93830@sina.cn # 授权邮箱
@@ -17,7 +20,7 @@ spring:
   redis:
     database: 0 # 1号库
     host: 127.0.0.1 #主机地址
-    password: hOkI1993
+    password: hOkI1993 # form dokcer compose h0kI1993
     port: 6379 # 端口号
     jedis:
       pool:

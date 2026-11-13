@@ -1,0 +1,32 @@
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: pethome-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: sakura1993
+      MYSQL_DATABASE: pethome
+      TZ: Asia/Shanghai
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/sql/init:/docker-entrypoint-initdb.d:ro     # 自动初始化建表,路径./docker/sql/init
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-psakura1993"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:5
+    container_name: pethome-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass hOkI1993 --appendonly yes
+    volumes:
+      - redis-data:/data
+
+volumes:
+  mysql-data:
+  redis-data:

@@ -18,7 +18,7 @@ public class MyInterceptorConfig implements WebMvcConfigurer {
 
     /**
      * 注册拦截器
-     * @param registry
+     * @param registry 拦截器对象
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -33,7 +33,7 @@ public class MyInterceptorConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/pet/front")
                 .excludePathPatterns("/pet/detail/**")
                 .excludePathPatterns("/pay/**")
-                .excludePathPatterns("/product/front")
-                .excludePathPatterns("/product/detail/**");
+                .excludePathPatterns("/product/front");
+//                .excludePathPatterns("/product/detail/**");
     }
 }
