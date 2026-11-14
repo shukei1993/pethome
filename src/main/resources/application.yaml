@@ -5,12 +5,18 @@ server:
 spring:
   datasource: #数据库连接配置
     driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: sakura1993
+#    username: root
+#    环境变量默认值 2016.11.13
+    username: ${MYSQL_USER:root}
+#    password: sakura1993
+#    环境变量默认值 2016.11.13
+    password: ${MYSQL_PASSWORD:sakura1993}
 #   local database on windows
 #    url: jdbc:mysql://localhost:3306/pethome?useUnicode=true&characterEncoding=utf8
     # 3307:3306 on docker-data mysql-data
-    url: jdbc:mysql://localhost:3307/pethome?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://localhost:3307/pethome?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    # 环境变量默认值 2016.11.13
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3307}/pethome?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
   mail:
     host: smtp.sina.cn # 服务商主机地址
     username: zj93830@sina.cn # 授权邮箱
@@ -19,9 +25,9 @@ spring:
       mail.smtp.auth: true
   redis:
     database: 0 # 1号库
-    host: 127.0.0.1 #主机地址
-    password: hOkI1993 # form dokcer compose h0kI1993
-    port: 6379 # 端口号
+    host: ${REDIS_HOST:127.0.0.1} #主机地址 # 环境变量默认值 2016.11.13
+    password: ${REDIS_PASSWORD:hOkI1993} # form dokcer compose h0kI1993 # 环境变量默认值 2016.11.13
+    port: ${REDIS_PORT:6379} # 端口号 # 环境变量默认值 2016.11.13
     jedis:
       pool:
         min-idle: 3 # 连接池闲时连接数
