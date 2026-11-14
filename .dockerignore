@@ -1,0 +1,23 @@
+# 构建产物
+target/
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Git
+.git/
+.gitignore
+
+# Docker 自身文件（不需要进镜像）
+docker/
+Dockerfile
+.dockerignore
+docker-compose.yaml
+
+# 文档与日志
+README.md
+*.log
+logs/

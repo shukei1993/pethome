@@ -1,5 +1,5 @@
 services:
-  mysql:
+  pethome-mysql:
     image: mysql:5.7
     container_name: pethome-mysql
     ports:
@@ -8,25 +8,60 @@ services:
       MYSQL_ROOT_PASSWORD: sakura1993
       MYSQL_DATABASE: pethome
       TZ: Asia/Shanghai
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./docker/sql/init:/docker-entrypoint-initdb.d:ro     # 自动初始化建表,路径./docker/sql/init
+      - ./docker/sql/init:/docker-entrypoint-initdb.d:ro
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-psakura1993"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-psakura1993"]
       interval: 10s
       timeout: 5s
       retries: 10
+      start_period: 30s
+    networks:
+      - pethome-net
 
-  redis:
+  pethome-redis:
     image: redis:5
     container_name: pethome-redis
     ports:
       - "6379:6379"
-    command: redis-server --requirepass hOkI1993 --appendonly yes
+    command: ["redis-server", "--requirepass", "h0kI1993", "--appendonly", "yes"]
     volumes:
       - redis-data:/data
+    networks:
+      - pethome-net
+
+  pethome-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pethome:local
+    container_name: pethome-app
+    ports:
+      - "8080:8080"
+    environment:
+      MYSQL_HOST: pethome-mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: sakura1993
+      REDIS_HOST: pethome-redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: h0kI1993
+      TZ: Asia/Shanghai
+    depends_on:
+      pethome-mysql:
+        condition: service_healthy
+      pethome-redis:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - pethome-net
 
 volumes:
   mysql-data:
   redis-data:
+
+networks:
+  pethome-net:
+    driver: bridge

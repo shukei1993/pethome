@@ -125,4 +125,21 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
+    <!-- 在 `package` 之后把瘦 jar 重新打包成可执行 fat jar 2016.11.14 -->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
