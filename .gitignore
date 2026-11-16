@@ -32,6 +32,8 @@ hs_err_pid*
 
 # 环境变量 / 密钥
 .env
+.env.local
+*.env
 *.local.yml
 
 # OS
