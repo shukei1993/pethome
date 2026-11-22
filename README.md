@@ -1,3 +1,4 @@
+![CI](https://github.com/shukei1993/pethome/actions/workflows/ci.yml/badge.svg)
 # pethome
 ## 本地启动
 
