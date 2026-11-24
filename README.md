@@ -21,3 +21,34 @@
 | Redis | 6379 | 需要密码          |
 | 应用 | 8080 | Spring Boot   |
 
+## 云端部署
+
+生产环境使用 `docker-compose.prod.yml`，镜像来自阿里云 ACR（由 GitHub Actions 自动构建推送）。
+
+### 服务器准备
+
+​```bash
+apt install -y curl
+curl -fsSL https://get.docker.com | bash
+fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
+echo '/swapfile none swap sw 0 0' >> /etc/fstab
+​```
+
+### 部署
+
+​```bash
+git clone https://github.com/shukei1993/pethome.git /opt/pethome
+cd /opt/pethome
+cp .env.example .env   # 填入真实值
+docker login --username=xxx crpi-xxx.cn-hongkong.personal.cr.aliyuncs.com
+docker compose -f docker-compose.prod.yml pull
+docker compose -f docker-compose.prod.yml up -d
+​```
+
+### 更新
+
+​```bash
+docker compose -f docker-compose.prod.yml pull app
+docker compose -f docker-compose.prod.yml up -d app
+​```
+
