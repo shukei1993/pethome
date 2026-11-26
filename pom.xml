@@ -6,7 +6,8 @@
 
     <groupId>com.hoki.zj</groupId>
     <artifactId>pethome</artifactId>
-    <version>1.0-SNAPSHOT</version>
+<!--    <version>1.0-SNAPSHOT</version>-->
+    <version>1.0.1</version>
 
     <!-- SpringBoot -->
     <parent>

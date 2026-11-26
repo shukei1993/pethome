@@ -74,3 +74,26 @@ jobs:
           tags: |
             ${{ secrets.ACR_REGISTRY }}/pethome-shukei/app:latest
             ${{ secrets.ACR_REGISTRY }}/pethome-shukei/app:${{ github.sha }}
+
+  deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    # 只有 push 到 main 才部署；PR 和手动触发不部署
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Deploy to ECS via SSH
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          command_timeout: 10m          # 拉镜像可能慢，默认 10s 会超时
+          script: |
+            set -e
+            cd /opt/pethome
+            git fetch origin main
+            git reset --hard origin/main
+            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yml pull app
+            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yml up -d app
+            docker compose -f docker-compose.prod.yml ps
+            docker inspect pethome-app --format 'Deployed image: {{.Config.Image}}'

@@ -52,3 +52,44 @@ docker compose -f docker-compose.prod.yml pull app
 docker compose -f docker-compose.prod.yml up -d app
 ​```
 
+---
+
+## CI/CD 流程
+
+### 链路概览
+
+代码仓库与部署配置同源：ECS 上 `git pull` 拿到 `docker-compose.prod.yml` 与
+`docker/sql/init/*.sql`，镜像则从 ACR 拉取，二者来源不同、认证方式也不同。
+
+### 三个阶段
+
+| 阶段 | 触发条件 | 执行内容 | 产物 |
+|---|---|---|---|
+| `build` | push / PR | `mvn -B -Dmaven.test.skip=true package` | `target/pethome.jar` |
+| `docker` | `needs: build` | 读根目录 `Dockerfile` 多阶段构建，登录 ACR 后推送 | `<ACR>/pethome-shukei/app:latest` 与 `:<commit-sha>` |
+| `deploy` | **仅 push 到 main** | SSH 到 ECS 执行滚动更新 | 新容器替换旧容器 |
+
+`deploy` 上有 `if: github.ref == 'refs/heads/main' && github.event_name == 'push'`，
+PR 与手动触发都不会碰生产环境。
+
+### 必需的 GitHub Secrets
+
+| Name | 用途 |
+|---|---|
+| `ACR_REGISTRY` | ACR 专属域名（个人版不是 `registry.cn-hongkong.aliyuncs.com`） |
+| `ACR_USERNAME` | ACR 用户名 |
+| `ACR_PASSWORD` | ACR 固定密码 |
+| `SSH_HOST` | ECS 公网 IP |
+| `SSH_USER` | ECS 登录用户（阿里云默认 `root`） |
+| `SSH_KEY` | 专供部署的 ed25519 私钥全文（含 BEGIN/END 行） |
+
+### 部署时服务器上发生什么
+
+`deploy` job 实际执行：
+
+```bash
+cd /opt/pethome
+git fetch origin main && git reset --hard origin/main   # 配置以仓库为准
+APP_TAG=<commit-sha> docker compose -f docker-compose.prod.yml pull app
+APP_TAG=<commit-sha> docker compose -f docker-compose.prod.yml up -d app
+
