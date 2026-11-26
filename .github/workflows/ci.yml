@@ -93,7 +93,8 @@ jobs:
             cd /opt/pethome
             git fetch origin main
             git reset --hard origin/main
-            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yml pull app
-            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yml up -d app
-            docker compose -f docker-compose.prod.yml ps
+            test -f docker-compose.prod.yaml || { echo "::error::compose file missing"; ls -la; exit 1; }
+            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml pull app
+            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml up -d app
+            docker compose -f docker-compose.prod.yaml ps
             docker inspect pethome-app --format 'Deployed image: {{.Config.Image}}'
