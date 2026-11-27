@@ -63,10 +63,13 @@ services:
     environment:
       # 仅作变化标记，不参与运行, 每次部署 `APP_TAG` 都不同 → compose 认为服务配置变了 → **自动重建 nginx**，加载新配置。零额外命令。
       APP_TAG: ${APP_TAG:-latest}
+      # `TZ` 让应用层拿到变量,`nginx:alpine` 镜像基于 musl，没有装 tzdata**，所以只设 `TZ` 环境变量是无效的,下面添加容器时间跟宿主机走
+      TZ: Asia/Shanghai
     ports:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - /etc/localtime:/etc/localtime:ro       # ← 关键：容器时间跟宿主机走
     depends_on:
       - pethome-app
     networks:
