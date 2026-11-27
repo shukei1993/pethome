@@ -94,7 +94,8 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             test -f docker-compose.prod.yaml || { echo "::error::compose file missing"; ls -la; exit 1; }
+            test -f nginx/nginx.conf || { echo "::error::nginx.conf missing"; exit 1; }
             APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml pull pethome-app
-            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml up -d pethome-app
+            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml up -d pethome-app pethome-nginx
+            docker compose -f docker-compose.prod.yaml exec -T pethome-nginx nginx -s reload || true
             docker compose -f docker-compose.prod.yaml ps
-            docker inspect pethome-app --format 'Deployed image: {{.Config.Image}}'
