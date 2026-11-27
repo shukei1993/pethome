@@ -33,8 +33,10 @@ services:
   pethome-app:
     image: ${ACR_REGISTRY}/pethome-shukei/app:${APP_TAG:-latest}
     container_name: pethome-app
-    ports:
-      - "8080:8080"
+#    ports:
+#      - "8080:8080"
+    expose:
+      - "8080"
     environment:
       MYSQL_HOST: pethome-mysql
       MYSQL_PORT: 3306
