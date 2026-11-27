@@ -60,6 +60,9 @@ services:
   pethome-nginx:
     image: nginx:1.25-alpine
     container_name: pethome-nginx
+    environment:
+      # 仅作变化标记，不参与运行, 每次部署 `APP_TAG` 都不同 → compose 认为服务配置变了 → **自动重建 nginx**，加载新配置。零额外命令。
+      APP_TAG: ${APP_TAG:-latest}
     ports:
       - "80:80"
     volumes:
