@@ -95,7 +95,10 @@ jobs:
             git reset --hard origin/main
             test -f docker-compose.prod.yaml || { echo "::error::compose file missing"; ls -la; exit 1; }
             test -f nginx/nginx.conf || { echo "::error::nginx.conf missing"; exit 1; }
+#             语法预校验：不通过直接失败，保持旧容器继续服务
+            docker run --rm -v /opt/pethome/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro nginx:1.25-alpine nginx -t
             APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml pull pethome-app
-            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml up -d pethome-app pethome-nginx
-            docker compose -f docker-compose.prod.yaml exec -T pethome-nginx nginx -s reload || true
+#            `nginx -t` 拦语法错、`--wait` 拦启动失败，两层防线就齐了。
+            APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml up -d --wait --wait-timeout 90 pethome-app pethome-nginx
+#            docker compose -f docker-compose.prod.yaml exec -T pethome-nginx nginx -s reload || true # 在用 `up -d --wait`，并且 `APP_TAG` 变了会重建 nginx 容器，配置文件自然重新加载
             docker compose -f docker-compose.prod.yaml ps
