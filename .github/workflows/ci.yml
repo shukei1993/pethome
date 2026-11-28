@@ -78,8 +78,8 @@ jobs:
   deploy:
     needs: docker
     runs-on: ubuntu-latest
-    # 只有 push 到 main 才部署；PR 和手动触发不部署
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    # 后端 push 到 main 就部署；手动触发workflow_dispatch也部署，而PR不会部署（本身就不再github仓库PR）
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     steps:
       - name: Deploy to ECS via SSH
         uses: appleboy/ssh-action@v1.1.0
@@ -95,6 +95,11 @@ jobs:
             git reset --hard origin/main
             test -f docker-compose.prod.yaml || { echo "::error::compose file missing"; ls -la; exit 1; }
             test -f nginx/nginx.conf || { echo "::error::nginx.conf missing"; exit 1; }
+            cd /opt/pethome-web
+            git fetch origin master
+            git reset --hard origin/master
+            test -d pethome-front || { echo "::error::pethome-front missing"; exit 1; }
+            cd /opt/pethome
             docker run --rm -v /opt/pethome/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro nginx:1.25-alpine nginx -t
             APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml pull pethome-app
             APP_TAG=${{ github.sha }} docker compose -f docker-compose.prod.yaml up -d --wait --wait-timeout 90 pethome-app pethome-nginx
