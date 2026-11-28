@@ -37,6 +37,8 @@ public class LoginInterceptor implements HandlerInterceptor {
                 return true; // 放行
             }
         }
+        // 2.没有值,设置状态为401
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);   // 401
         // 3.没有值,响应对象设置字符集和返回数据格式json
         response.setContentType("application/json;charset=utf-8");
         // 4.获取缓冲字符输出流
